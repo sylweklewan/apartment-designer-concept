@@ -89,12 +89,12 @@ resource "kubernetes_manifest" "model_serving" {
             requests = {
               memory           = var.memory_limit
               cpu              = "1"
-              "nvidia.com/gpu" = "1"
+              "nvidia.com/mig-2g.20gb" = "1"
             }
             limits = {
               memory           = var.memory_limit
               cpu              = "1"
-              "nvidia.com/gpu" = "1"
+              "nvidia.com/mig-2g.20gb" = "1"
             }
           }
         }

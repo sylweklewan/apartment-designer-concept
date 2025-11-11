@@ -45,6 +45,8 @@ spec:
         env:
           - name: "PASS_DEVICE_SPECS"
             value: "true"
+          - name: "NVIDIA_MIG_MONITOR_DEVICES"
+            value: "all"
         securityContext:
           privileged: true
           allowPrivilegeEscalation: true

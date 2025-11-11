@@ -28,39 +28,19 @@ variable "max_tokens" {
   description = "Max number of tokens in response"
 }
 
-variable "jenkins_pipeline_files" {
-  type        = map(string)
-  description = "contains path to jenkins files that should be translated"
-}
-
-variable "jenkins_pipeline_prompt_start" {
-  type        = string
-  description = "prompt introduction to jenkins file"
-}
-
 variable "model_storage_size" {
   type        = string
   description = "size of pv holding model"
 }
 
-variable "embedding_model" {
-  description = "model to be used to generate embeddings"
+variable "text2image_model" {
+  description = "model to be used to base images"
   type        = string
 }
 
-variable "embedding_port" {
+variable "text2image_port" {
   type        = number
-  description = "port on which embeddings model serving is listenning"
-}
-
-variable "vector_database" {
-  type        = string
-  description = "name of vector database"
-}
-
-variable "vector_database_storage_size" {
-  type        = string
-  description = "storage size for vector database"
+  description = "port on which text2image model serving is listenning"
 }
 
 variable "node_name" {
